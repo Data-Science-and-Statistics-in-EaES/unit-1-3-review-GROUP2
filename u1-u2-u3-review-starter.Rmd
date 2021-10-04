@@ -39,12 +39,18 @@ glimpse(density)
 glimpse(solubility_hardness)
 glimpse(location_descriptions)
 
+names(density)
+names(solubility_hardness)
+names(location_descriptions)
+
 ```
 Density contains 3 rows and 2 variables
 solubility hardness contains 3 rows and 3 variables
 location descriptions contains 10 rows and 2 variables
 
-
+the density row is the actual density of quartz, feldspar, and Biotite.
+the solubility hardness row shows solubility as low, medium, or high.
+the location description row descibes the 10 locations to be near water. 
 
 ### Exercise 3
 

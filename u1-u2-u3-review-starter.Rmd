@@ -1,7 +1,7 @@
 ---
 title: "Unit 1 - 3 Review Starter"
-author: "Insert your group number here"
-date: "Insert date here"
+author: "Group 2 (Gold team - Halite)"
+date: "10-04-2021"
 output: html_document
 ---
 
@@ -22,10 +22,15 @@ solubility_hardness <- read_csv("data/solubility-hardness.csv")
 
 ### Exercise 1
 
-Remove this text, and add your answer for Exercise 1 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r inspect-sand-minerals}
+glimpse(sites)
+
+names(sites)
+```
+
+In this data frame, there are 23 rows and 2 variables.
+
+Each row is a mineral (either Quartz, Feldspar, or biotite) in any of ten different locations.
 
 ### Exercise 2
 

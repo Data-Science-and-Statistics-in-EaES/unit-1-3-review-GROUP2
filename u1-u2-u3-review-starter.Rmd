@@ -12,7 +12,7 @@ library(tidyverse)
 ```
 
 ```{r load-data, message=FALSE}
-sites <- read_csv("data/sand-minerals.csv")
+sand_minerals <- read_csv("data/sand-minerals.csv")
 location_descriptions <- read_csv("data/location-descriptions.csv")
 density <- read_csv("data/density.csv")
 solubility_hardness <- read_csv("data/solubility-hardness.csv")
@@ -23,9 +23,9 @@ solubility_hardness <- read_csv("data/solubility-hardness.csv")
 ### Exercise 1
 
 ```{r inspect-sand-minerals}
-glimpse(sites)
+glimpse(sand_minerals)
 
-names(sites)
+names(sand_minerals)
 ```
 
 In this data frame, there are 23 rows and 2 variables.
@@ -34,10 +34,17 @@ Each row is a mineral (either Quartz, Feldspar, or biotite) in any of ten differ
 
 ### Exercise 2
 
-Remove this text, and add your answer for Exercise 2 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r inspect_other_dataframes}
+glimpse(density)
+glimpse(solubility_hardness)
+glimpse(location_descriptions)
+
+```
+Density contains 3 rows and 2 variables
+solubility hardness contains 3 rows and 3 variables
+location descriptions contains 10 rows and 2 variables
+
+
 
 ### Exercise 3
 

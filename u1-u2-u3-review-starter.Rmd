@@ -54,10 +54,14 @@ the location description row descibes the 10 locations to be near water. from zu
 
 ### Exercise 3
 
-Remove this text, and add your answer for Exercise 3 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r join-mineral-properties}
+
+sand_mineral_density <- left_join(sand_minerals, density)
+sand_mineral_properties <- left_join(sand_mineral_density, solubility_hardness)
+
+```
+
+There `r nrow(sand_mineral_density)` rows in sand_mineral_density, compared to `r nrow(sand_minerals)` rows in sand_minerals. So they have the same number of rows, which checks out that sand_minerals was maintained in the join.
 
 ### Exercise 4
 

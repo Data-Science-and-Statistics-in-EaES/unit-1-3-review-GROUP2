@@ -68,21 +68,23 @@ There `r nrow(sand_mineral_density)` rows in sand_mineral_density, compared to `
 ```{r sand-mineral-properties}
 count(sand_mineral_properties, location)
 ```
+
 ```{r removal-of last-10-rows}
 slice_head(sand_mineral_properties, n=10)
 ```
+
 ```{r decending-density}
 sand_mineral_properties%>%
   arrange(desc(density))%>%
   slice_tail(n = 10)
-  
 ```
+
 ```{r location-and-hardness}
 sand_mineral_properties %>%
   select(location, hardness) %>%
   slice_tail(n=5)
-
 ```
+
 ```{r removal-of-NAs}
 sand_mineral_properties %>%
   filter(hardness != "NA") %>%
@@ -90,13 +92,31 @@ sand_mineral_properties %>%
   slice_head(n=5)
 ```
 
-
 ### Exercise 5
 
-Remove this text, and add your answer for Exercise 5 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r density-values}
+sand_mineral_properties["density"]
+```
+
+```{r number-mineral-type}
+count(sand_mineral_properties, minerals)
+```
+
+```{r add-new-variable-density_1000}
+sand_mineral_properties %>% 
+  mutate(density_1000 = density / 1000)
+```
+
+```{r mean-density}
+sand_mineral_properties %>% 
+  summarize(mean_density = mean(density, na.rm = T))
+```
+
+```{r location-density}
+sand_mineral_properties %>% 
+  group_by(location) %>% 
+  summarize(mean_density = mean(density, na.rm = T))
+```
 
 ### Exercise 6
 

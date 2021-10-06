@@ -65,10 +65,31 @@ There `r nrow(sand_mineral_density)` rows in sand_mineral_density, compared to `
 
 ### Exercise 4
 
-Remove this text, and add your answer for Exercise 4 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+```{r sand-mineral-properties}
+count(sand_mineral_properties, location)
+```
+```{r removal-of last-10-rows}
+slice_head(sand_mineral_properties, n=10)
+```
+```{r decending-density}
+sand_mineral_properties%>%
+  arrange(desc(density))%>%
+  slice_tail(n = 10)
+  
+```
+```{r location-and-hardness}
+sand_mineral_properties %>%
+  select(location, hardness) %>%
+  slice_tail(n=5)
+
+```
+```{r removal-of-NAs}
+sand_mineral_properties %>%
+  filter(hardness != "NA") %>%
+  arrange(desc(density)) %>%
+  slice_head(n=5)
+```
+
 
 ### Exercise 5
 
